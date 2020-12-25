@@ -1,3 +1,4 @@
+import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
 import React, { useState } from 'react';
 import {
   Carousel,
@@ -9,7 +10,7 @@ import {
 
 const items = [
   {
-    src: '../assets/images/bootstrap.png',
+    src: 'https://maromo.com.br/assets/images/bootstrap.png',
     altText: 'Slide 1',
     caption: 'Slide 1'
   },
