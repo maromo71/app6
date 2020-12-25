@@ -7,7 +7,7 @@ import Painel, { MyCarousel } from '../components/Painel';
 function Home() {
     return <div>
         <Header />
-        <Container>
+        <Container style={{maxWidth: '1024px'}}>
             <Painel />
             <h1>Home</h1>
             <h3>Página do professor Maromo</h3>
