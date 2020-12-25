@@ -1,8 +1,8 @@
 import Link from 'next/link';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Sobre() {
-    return <div>
+    return <div className="container">
        <h1>Sobre</h1>
        <h3>Quem é o Maromo? </h3>
        <p>
@@ -10,9 +10,8 @@ function Sobre() {
            de Mogi Mirim e da Faculdade Santa Lúcia de Engenharia da Computação.
        </p>
        <Link href="/">
-            <a>Acessar a página home</a>
+            <a a className="btn btn-primary">Acessar a página home</a>
        </Link>
-       
     </div>
 }
 
