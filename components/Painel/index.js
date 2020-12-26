@@ -19,22 +19,26 @@ const items = [
   {
     src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/1.png',
     altText: 'Imagem do Bootstrap',
+    urlDestination: '#',
     caption: 'Aulas do Bootstrap',
 
   },
   {
     src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/2.png',
     altText: 'Imagem do Git',
+    urlDestination: '#',
     caption: 'Aulas de Git'
   },
   {
     src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/3.png',
     altText: 'Imagem do Next-js',
+    urlDestination: '#',
     caption: 'Aulas de Next-js'
   },
   {
     src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/4.png',
     altText: 'Imagem do Java',
+    urlDestination: '#',
     caption: 'Aulas de Java'
   }
 
@@ -68,8 +72,10 @@ const Painel = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img style={{ maxHeight: '100%', maxWidth: '100%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <a href={item.urlDestination}>
+          <img style={{ maxHeight: '100%', maxWidth: '100%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
+          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        </a>
       </CarouselItem>
 
     );
@@ -82,7 +88,7 @@ const Painel = (props) => {
         next={next}
         previous={previous}
       >
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
         <CarouselControl direction="prev" directionText="Anterior" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Próxima" onClickHandler={next} />
