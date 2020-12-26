@@ -68,7 +68,7 @@ const Painel = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img style={{ Height: '310px', maxWidth: '50%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
+        <img style={{ maxHeight: '100%', maxWidth: '100%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
 
