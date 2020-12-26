@@ -1,4 +1,5 @@
 import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
+import styled from 'styled-components';
 import React, { useState } from 'react';
 import {
   Carousel,
@@ -8,28 +9,25 @@ import {
   CarouselCaption
 } from 'reactstrap';
 
+const Wrapper = styled.section`
+  display: block;
+  max-height: 330px;
+  padding: 4em;
+  background: #8d99ae;
+`;
 const items = [
   {
-    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/bootstrap.png',
+    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/github_cat.png',
     altText: 'Imagem do Bootstrap',
     caption: 'Aulas de Bootstrap',
-    
+
   },
   {
-    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/carrou_react.png',
+    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/nextjs.png',
     altText: 'Imagem do React',
     caption: 'Aulas de React'
-  },
-  {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
-  },
-  {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 4',
-    caption: 'Slide 4'
   }
+
 ];
 
 const Painel = (props) => {
@@ -60,23 +58,27 @@ const Painel = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img style={{height: '300px', margin: '0 auto', alignContent: 'center'}} src={item.src} alt={item.altText} />
+        <img style={{ maxHeight: '50%', maxWidth: '50%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
+
     );
   });
 
   return (
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
+    <Wrapper>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+      >
       <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
-      <CarouselControl direction="prev" directionText="Anterior" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Próxima" onClickHandler={next} />
-    </Carousel>
+        {slides}
+        <CarouselControl direction="prev" directionText="Anterior" onClickHandler={previous} />
+        <CarouselControl direction="next" directionText="Próxima" onClickHandler={next} />
+      </Carousel>
+    </Wrapper>
+
   );
 }
 
