@@ -19,7 +19,7 @@ const items = [
   {
     src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/1.png',
     altText: 'Imagem do Bootstrap',
-    caption: 'Aulas de Bootstrap',
+    caption: 'Aulas do Bootstrap',
 
   },
   {
