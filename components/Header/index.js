@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Collapse,
   Navbar,
@@ -11,7 +12,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
 } from 'reactstrap';
 
 const Header = (props) => {
@@ -22,7 +22,7 @@ const Header = (props) => {
   return (
     <div>
     
-      <Navbar color="dark" dark expand="md">
+      <Navbar style={{backgroundColor: '#2F4F4F'}} dark expand="md">
         <NavbarBrand href="/">Home</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

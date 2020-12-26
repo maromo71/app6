@@ -1,11 +1,12 @@
-import Link from 'next/link';
+import { Container } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Button } from 'reactstrap';
 import Header from '../components/Header';
-import Painel from '../components/Painel';
+import Painel from '../components/Panel';
+import Footer from '../components/MyFooter';
+
 
 function Home() {
-    return <div>
+         return <div>
         <Header />
         <Container>
             <p />
@@ -17,13 +18,11 @@ function Home() {
                 <h1>Home</h1>
                 <h3>Página do professor Maromo</h3>
                 <p>Nesta página você encontra as principais informações sobre o professor e suas aulas</p>
-                <Link href="/sobre">
-                    <Button color="primary" >Acessar a página sobre</Button>
-                </Link>
+                <p>Esta é a página de discussão de Tecnologia, destinada ao debate sobre melhorias e tarefas relacionadas aos conteúdos de aula do professor. Isto não é um fórum para discussão geral sobre o assunto tratado nele.</p>
+                <p> O professor Maromo se dedica ao estudo de Tecnologia da Informação e Comunicação a mais de 20 anos. Tendo lecionado em diversas instituições públicas e privadas.</p>
             </Container>
-
         </Container>
-
+        <Footer/>
     </div>
 }
 

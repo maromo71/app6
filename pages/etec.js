@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Button } from 'reactstrap';
+import { Container } from 'reactstrap';
 import Header from '../components/Header';
+import Footer from '../components/MyFooter';
+
 
 function Etec() {
     return <div>
@@ -46,10 +46,8 @@ function Etec() {
             
             </p>
             </Container>
-                <Link href="/">
-                        <Button color="primary">Acessar a página home</Button>
-                </Link>
         </Container>
+        <Footer />
    </div>
 }
 
