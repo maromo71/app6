@@ -11,7 +11,7 @@ import {
 
 const Wrapper = styled.section`
   display: block;
-  height: 330px;
+  height: 430px;
   padding: 4em;
   background: #a6a6a6;
 `;
