@@ -11,21 +11,31 @@ import {
 
 const Wrapper = styled.section`
   display: block;
-  max-height: 330px;
+  height: 330px;
   padding: 4em;
-  background: #8d99ae;
+  background: #a6a6a6;
 `;
 const items = [
   {
-    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/github_cat.png',
+    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/1.png',
     altText: 'Imagem do Bootstrap',
     caption: 'Aulas de Bootstrap',
 
   },
   {
-    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/nextjs.png',
-    altText: 'Imagem do React',
-    caption: 'Aulas de React'
+    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/2.png',
+    altText: 'Imagem do Git',
+    caption: 'Aulas de Git'
+  },
+  {
+    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/3.png',
+    altText: 'Imagem do Next-js',
+    caption: 'Aulas de Next-js'
+  },
+  {
+    src: 'https://raw.githubusercontent.com/maromo71/app6/main/assets/images/4.png',
+    altText: 'Imagem do Java',
+    caption: 'Aulas de Java'
   }
 
 ];
@@ -58,7 +68,7 @@ const Painel = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img style={{ maxHeight: '50%', maxWidth: '50%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
+        <img style={{ Height: '310px', maxWidth: '50%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
 
