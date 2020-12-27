@@ -2,13 +2,12 @@ import { Container } from 'reactstrap';
 import Header from '../components/Header';
 import Footer from '../components/MyFooter';
 
-
 function Etec() {
     return <div>
         <Header />
         <Container>
             <h1>Etec</h1>
-            <h3>Etec Pedro Ferreira alves </h3>
+            <h3>Etec Pedro Ferreira Alves </h3>
             <div style={{ display: 'block', margin: '0 auto', padding: '10px', width: '18rem' }}>
                 <img style={{ borderRadius: '50%' }} className="card-img-top" alt="Foto do Maromo" src='http://majuconfeccoes.com.br/wp-content/uploads/2019/08/ETEC.png' />
             </div>

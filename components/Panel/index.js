@@ -10,7 +10,7 @@ import {
 
 const Wrapper = styled.section`
   display: block;
-  height: 430px;
+  max-height: 430px;
   padding: 4em;
   background: #a6a6a6;
 `;
