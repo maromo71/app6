@@ -71,9 +71,9 @@ const Painel = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <a href={item.urlDestination}>
-          <img style={{ maxHeight: '100%', maxWidth: '100%', display: 'block', margin: '0 auto' }} src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <a  href={item.urlDestination}>
+          <img style={{ maxHeight: '100%', maxWidth: '100%', display: 'block', margin: '0 auto', textAlign: 'center' }} src={item.src} alt={item.altText} />
+          <CarouselCaption style={{textAlign: 'center'}} captionHeader={item.caption} />
         </a>
       </CarouselItem>
 
